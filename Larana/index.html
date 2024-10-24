@@ -1,0 +1,464 @@
+<html>
+ <head>
+  <title>
+   The Larana Hotel
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a3b4c;
+            color: #f5e6c8;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #000000;
+            height: 100px;
+        }
+        .navbar div {
+        display: flex;
+        justify-content: center; 
+        gap: 100px;
+        }
+        .navbar img{
+            filter: brightness(150%); 
+            margin-right: 20px;
+            position: absolute;
+            left: 20px;
+            height: auto;
+        }
+        .navbar a {
+            color: #f5e6c8;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: #f5e6c8;
+            margin: 0;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0;
+            padding: 0;
+        }
+        .hero-text {
+            position: absolute;
+            bottom: 300px;
+            left: 800px;
+        }
+        .hero-text h1 {
+            font-size: 78px;
+            margin: 0;
+        }
+        .hero-text p {   
+            font-size: 34px;
+            margin: 5px 0 0;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .intro{
+            margin: 0;
+            position: relative;
+        }
+        .intro img{
+            width: 100%;
+            margin-top: 0;
+            padding: 0;
+            height: auto;
+        }
+        .welcome{
+            position: absolute ;
+            top: 40px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+        }
+        .welcome h2{
+            font-size: 50px;
+            color:#ffffff;
+        }
+        .welcome p{
+            font-size: 40px;
+            color: #ffffff;
+        }
+        .rooms {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .room {
+            background-color: #2a4d5f;
+            padding: 10px;
+            margin: 10px;
+            width: 25%;
+            box-sizing: border-box; 
+            border: 2px solid #f5e6c8; 
+            border-radius: 15px;
+            position: relative;
+        }
+        .room img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+        .room h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .room p {
+            font-size: 16px;
+        }
+        .room button {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #1a3b4c;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 200px;
+            border-radius: 30px;
+            opacity: 0.6;
+            backdrop-filter: blur(5px);
+        }
+        .spa {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            position: relative;
+            margin-bottom: 40px;
+            height: 1080px;
+            
+        }
+        .spa img {
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+            position: absolute;
+            border-radius: 15px;
+        }
+
+        .spa img:nth-child(1) {
+            top: 20px; 
+            left: 10px; 
+        }
+
+        .spa img:nth-child(2) {
+            top: 350px;
+            left: 220px; 
+        }
+
+        .spa img:nth-child(3) {
+            top: 40px; 
+            left: 430px; 
+        }
+        .spa img:nth-child(4) {
+            top: 640px; 
+            left: 30px; 
+        }
+        .spa-text {
+            width: 45%;     
+            margin: 10px;
+            padding: 20px;
+            background-color: rgba(42, 77, 95, 0.8);
+            border-radius: 15px;
+            position: absolute;
+            right:50px;
+            z-index: 200;
+        }
+        .spa-text p {
+            font-size: 35px;
+            color:#ffffff;
+        }
+        .spa-text h2{
+            font-size: 50px;
+            color: #ffffff;
+        }
+        .testimonial {
+            background-color: #2a4d5f;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .section, .des {
+            width: 100%; 
+            padding: 0;  
+            margin-right: 0;
+            margin-left: 0; 
+            margin-top: 30px;  
+        }
+
+        .des{
+            position: relative;
+        }
+        .des1{  
+            background-color: rgba(255, 255, 255, 0.8);
+            color:#000;
+            position: absolute;
+            top: 59px;
+            border-radius: 15px;
+            margin: 2px;
+            opacity: 0.7;
+        }
+        .des1 p{
+            font-size: 34px;
+        }
+        .testimonial p {
+            font-size: 16px;
+        }
+        .testimonial img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+         
+        .location {
+            text-align: center;
+            height: 350px;
+            margin: 40px auto;
+            position: relative;
+        }
+        .location img {
+            width: 40%;
+            height: auto;
+            position: absolute;
+            left: 80px;    
+        }
+        .address{
+            position: absolute;
+            width: 40%;
+            top: 80px;
+            right: 100px;
+            background-color: rgba(42, 77, 95, 0.8);
+            border-radius: 15px;
+            padding: 10px;
+        }
+        .address p{
+            color:#ffffff;
+        }
+        .footer {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .footer {
+            background-color: #000;
+            color: #f5e6c8;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer .column {
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+            padding: 0 10px;
+        }
+        .footer .column h3 {
+            margin-top: 0;
+        }
+        .footer .column p, .footer .column a {
+            color: #f5e6c8;
+            text-decoration: none;
+        }
+        .footer .column a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 10px;
+        }
+        .footer .social-icons a {
+            color: #f5e6c8;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="navbar">
+   <img alt="Larana Hotel Logo" src="image/LOGO.png" height="100" width="100"/>
+   <div>
+    <a href="#">
+     HOME
+    </a>
+    <a href="#">
+     ROOMS
+    </a>
+    <a href="#">
+     ABOUT
+    </a>
+    <a href="#">
+     SERVICE
+    </a>
+    <a href="#">
+     MEMBER
+    </a>
+    <a href="#">
+     BOOKING
+    </a>
+    <a href="#">
+     LOGIN
+    </a>
+   </div>
+  </div>
+  <div class="hero">
+   <img alt="Hotel view with pool and ocean" height="600" src="image/back1.jpg" width="1920"/>
+   <div class="hero-text">
+    <h1>
+     The Larana Hotel
+    </h1>
+    <p>
+     A place to experience and enjoy the life
+    </p>
+   </div>
+  </div>
+  <div class="section" style="margin: 0;">
+    <div class="intro">
+        <img src="image/welcome.jpg" alt="">
+        <div class="welcome">
+            <h2>
+            Welcome to The Larana Hotel
+            </h2>
+            <p>
+            Discover the perfect blend of comfort and elegance at The Larana Hotel. Nestled in the heart of the city, we offer serene retreats with luxurious rooms, top-notch amenities, and exceptional service. Whether you're here for business or leisure, our hotel provides the ideal setting for relaxation and rejuvenation. Enjoy the stunning views, unwind in our spacious rooms, and savor the finest dining experiences. Your stay at The Larana Hotel will be a truly unforgettable one.
+            </p>
+        </div>
+    </div>
+  </div>
+  <div class="section">
+   <h2>
+    ROOMS, SUITES &amp; RESIDENCES
+   </h2>
+   <div class="rooms">
+    <div class="room">
+     <img alt="Deluxe Room with King Bed" height="200" src="https://storage.googleapis.com/a1aa/image/XEVD6wbBAMaWEFDtCSAX5bpYv7tO8qHG2Niu3DgyuCUzna6E.jpg" width="300"/>
+     <h3>
+      Deluxe Room
+     </h3>
+     <p>
+      The Deluxe Room is a cozy and spacious area, well-lit and designed to take you away from the urban hustle and provides you the comfort for a relaxing stay.
+     </p>
+     <button>
+      BOOK NOW
+     </button>
+    </div>
+    <div class="room">
+     <img alt="Connecting Room with large seating area" height="200" src="https://storage.googleapis.com/a1aa/image/3GFeqOVDlcV5dCfjOC2neDQy3hESe5H8u64s4WqMwuuF9pmOB.jpg" width="300"/>
+     <h3>
+      Connecting Room
+     </h3>
+     <p>
+      The combination of 2 rooms with a large seating area, a living room, spacious walk-in closet, perfect for larger parties or families.
+     </p>
+     <button>
+      BOOK NOW
+     </button>
+    </div>
+    <div class="room">
+     <img alt="Luxury Deluxe Corner Room" height="200" src="https://storage.googleapis.com/a1aa/image/dklefQrXAXnyVUXRwZU7Lf0j832f6LFSIqfK1efzhGehHfUTnA.jpg" width="300"/>
+     <h3>
+      Luxury Deluxe Corner
+     </h3>
+     <p>
+      This room is graciously furnished and spacious, providing the ultimate comfort and luxury for your stay.
+     </p>
+     <button>
+      BOOK NOW
+     </button>
+    </div>
+   </div>
+  </div>
+  <div class="section">
+   <div class="spa">
+    <img alt="Spa room with massage table" height="400" src="https://storage.googleapis.com/a1aa/image/bIeoztRE1BVzBCKCLuwrb1Y0Obdz7QyUTn5eFq68gOBKfUTnA.jpg" width="300"/>
+    <img alt="Spa treatment with essential oils" height="400" src="https://storage.googleapis.com/a1aa/image/ceHkEEFvjByKUqT1PF6sGfO43NmUBB7o55o4wLfHsDyf8pmOB.jpg" width="300"/>
+    <img alt="Relaxing spa environment" height="400" src="https://storage.googleapis.com/a1aa/image/Op3Gr704ozJbBNxf6p18TVAcoSo1RYF8yGYAbiFRseeJepmOB.jpg" width="300"/>
+    <img alt="Relaxing" height="400" src="image/spa1.jpg" width="300"/>
+    <div class="spa-text">
+        <h2>
+            LARANA SPA
+        </h2>
+     <p>
+      Welcome to Larana Spa, your haven for relaxation and holistic care. We take pride in offering a range of spa and wellness therapies that blend traditional healing practices with modern techniques to help you release stress, fatigue, and restore balance to your life. Our professional and experienced staff, along with premium natural products, are committed to providing you with the ultimate rejuvenating experience—from skincare treatments, massages, to wellness therapies that promote circulation, balance energy, and enhance overall well-being. Let us help you renew and embrace a sense of freshness in every moment.
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="section">
+   <div class="des" >
+    <img src="image/testimonial.jpg" alt="" width="100%" margin="0">
+    <div class="des1">
+        <p>You may be eligible for Genius discounts at Larana Hotel & Spa. To check if Genius discounts apply to your selected dates, please log in.
+            Genius discounts at this property depend on the booking date, stay date, and other available offers.
+            Located at 273 An Dương Vương, District 5, Ho Chi Minh City, Larana Hotel & Spa offers elegant accommodations and a Spa Center. Guests can enjoy a welcome drink in the lobby and access free WiFi throughout the entire property.
+            The fully equipped accommodations feature amenities such as a flat-screen TV, a safe, a minibar, and a wardrobe. Some rooms have a terrace or balcony. Private bathrooms are fitted with a bathtub or shower. Towels, slippers, and a hairdryer are also provided for guests. After a busy day, guests can relax with a massage treatment or enjoy a sauna session at the spa.
+            The bilingual staff at the property can assist guests with services like currency exchange, tour arrangements, ticket booking, and luggage storage.
+            Couples particularly like this location — they rated it 9.5 for a two-person trip.</p>
+    </div>
+   </div>
+   <div class="testimonial">
+    <img alt="Guest photo" height="50" src="https://storage.googleapis.com/a1aa/image/ZvX6uYhQ8TJRJZ6HSy2Xkyv0gG1uVbXW5YrxfskftsJOfUTnA.jpg" width="50"/>
+    <p>
+     "Great hotel, unbelievable breakfast. Would like to call out a wonderful man in the front foyer, Raymond. A gentle and helpful soul who I hope is appreciated by the Hotel. We had a great stay and felt very comfortable."
+    </p>
+   </div>
+  </div>
+  <div class="section location">
+   <h2>
+    LOCATION
+   </h2>
+   <img alt="Map showing the location of the hotel" height="400" src="image/map.png" width="55%"/>
+   <div class="address">
+        <p>
+            25 minutes drive from Tan Son Nhat International Airport<br />
+            15 minutes drive from the city centre<br />
+            A gateway to the many popular attractions Connected to Now Zone Fashion Mall
+        </p>
+        <p>Each of our hotels has its own individual character and flavor, but all have something in common: a dedication to omotenashi-Japan's culture of exceptional service, and attention to every detail of your stay.</p>
+   </div>
+  </div>
+  <div class="footer">
+    <div class="column">
+        <h3>The Larana Hotel</h3>
+        <p>Thank You So Much Guy For Your Valuable Time</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="column">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-phone"></i> 0932 000 327</p>
+        <p><i class="fas fa-phone"></i> 0763 777 834</p>
+        <p><i class="fas fa-envelope"></i> group2@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 273 An Duong Vuong St., Ward 3, District 5, Ho Chi Minh City</p>
+    </div>
+    <div class="column">
+        <h3>Contact Info</h3>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Blog</a></p>
+        <p><a href="#">Rooms</a></p>
+        <p><a href="#">Service</a></p>
+    </div>
+</div>
+ </body>
+</html>
